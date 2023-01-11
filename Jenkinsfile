@@ -18,8 +18,8 @@ pipeline {
     }  
     stage ('clean') {
             steps {
-                sh 'mkdir result'
-                sh 'cd result'
+                sh 'mkdir result-1'
+                sh 'cd result-1'
                 sh 'git archive main --format=zip --output=report.zip'
                 
             }
