@@ -16,11 +16,11 @@ pipeline {
         echo "test"
       }
     }  
-    stage ('zip') {
+    stage ('test') {
             steps {
                 sh 'mkdir archive'
                 sh 'cd archive'
-                sh 'git archive main --format=zip --output=python.zip'
+                sh 'git archive main --format=zip --output=text.zip'
                 
             }
         }
