@@ -15,7 +15,11 @@ pipeline {
       steps {
         echo "test"
       }
-    
+    }  
+    stage('test') {
+      steps {
+        sh 'bash-script.sh'
+      }
   }
   }
 }
