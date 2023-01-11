@@ -1,7 +1,5 @@
 pipeline {
   agent any
-   tools {
-  maven 'M2_HOME'
 }
   stages {
     stage('version') {
@@ -11,7 +9,7 @@ pipeline {
     }
     stage('hello') {
       steps {
-        sh 'python3 hello.py'
+        sh 'python3 check_endpoint.py'
       }
     }
   }
