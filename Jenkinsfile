@@ -16,10 +16,14 @@ pipeline {
         echo "test"
       }
     }  
-    stage('test') {
-      steps {
-        sh 'bash-script.sh'
-      }
+    stage ('push artifact') {
+            steps {
+                sh 'mkdir archive'
+                run git archive main --format=zip --output=python.zip > archive/test.txt
+                zip zipFile: 'test.zip', archive: false, dir: 'archive'
+                archiveArtifacts artifacts: 'test.zip', fingerprint: true
+            }
+        }
   }
   }
-}
+
