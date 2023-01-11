@@ -18,8 +18,8 @@ pipeline {
     }  
     stage ('test') {
             steps {
-                sh 'mkdir archive'
-                sh 'cd archive'
+                sh 'mkdir result'
+                sh 'cd result'
                 sh 'git archive main --format=zip --output=text.zip'
                 
             }
