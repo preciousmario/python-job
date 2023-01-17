@@ -18,9 +18,7 @@ pipeline {
     }  
     stage ('clean') {
             steps {
-                sh 'mkdir result-1'
-                sh 'cd result-1'
-                sh 'zip middlewasreScript${BUILD_NUMBER}.zip *  --exclude Jenkinsfile'
+           sh 'zip middlewasreScript${BUILD_NUMBER}.zip *  --exclude Jenkinsfile'
                 
             }
         }
